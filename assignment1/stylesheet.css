@@ -23,22 +23,19 @@ div {margin: auto;}
 .image1 {
     float: right;
     height: auto;
-    width: 46vw;
-    margin-right: 2vw;
+    width: 40vw;
+    margin-right: 5vw;
     margin-top: 5vw;
 }
 .para1 {font-family: "Helvetica", sans-serif ;
 float: left;
 text-align: left;
-margin-left: 2vw;
-margin-top: 7vw;
+margin-left: 5vw;
+margin-top: 5vw;
 width: 45vw;}
-.para2 {font-family: "Helvetica", sans-serif ;
-text-align: left;
-margin-top: 30vw;
-margin-left: 2vw;
-margin-right: 2vw;}
+
 .para {font-family: "Helvetica", sans-serif ;
     text-align: left;
-    margin-left: 2vw;
-    margin-right: 2vw;}
+    margin-left: 5vw;
+    margin-right: 5vw;
+margin-bottom: 5vw;}

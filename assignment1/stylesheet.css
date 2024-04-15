@@ -1,6 +1,7 @@
 body {background-color: lightcyan;}
 h1 {font-family: "Helvetica", sans-serif ;
     margin-left: 2%; 
+    margin-top: 2%;
     font-weight: 400;
 }
 h2 {font-family: "Helvetica", sans-serif ;
@@ -23,6 +24,12 @@ p {font-family: "Helvetica", sans-serif ;}
     float: right;
     height: auto;
     width: 50%;
+    margin-right: 2%;
+    margin-top: 5%;
 }
 .para1 {font-family: "Helvetica", sans-serif ;
-float: left;}
+float: left;
+text-align: left;
+margin-left: 2%;
+margin-top: 7%;
+width: 45%;}

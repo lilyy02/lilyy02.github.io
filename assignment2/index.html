@@ -34,23 +34,24 @@
 
       <div class="media-player">
         <!-- this is a short looping video I sourced from a royalty free library to add some more interesting visuals to the page. Should continuously loop as long as music is playing but may add function to disable it from playing to reduce data usage. -->
-        <video id="custom-video-player" controls>
+        <video id="custom-video-player" controls loop>
           <source
             src="assets/vecteezy_ai-generated-an-animated-scene-featuring-a-girl-with-wine_40983192_1.mp4"
             type="video/mp4"
           />
         </video>
-        <!-- added div for music player section. this should be a subsection which contains details of songs in the playlist and what is currently playing -->
-        <div class="music-player">
-          <audio id="underwater-exploration">
-            <source src="assets/music/1 - Underwater Exploration - Godmode.mp3"
-            type="audio/mp3">
-          </audio>
+
+        <!-- added div for playlist section. this should be a subsection which contains details of songs in the playlist and what is currently playing -->
+        <!-- details to show: track name, artist. these should be categories which the audio files fall under and have their own div therefore -->
+        <div class="playlist">
+          <div class="track-title">Title</div>
+          <div class="track-artist">Artist</div>
         </div>
-        <!-- buttons are layed out in order from left to right: shuffle, previous song, pause/play, next song, loop. This is done to be consistent with large music streaming services, i.e. Spotify and the YouTube Music app and makes it more usable for those already familiar with those platforms -->
+
+        <!-- buttons are laid out in order from left to right: shuffle, previous song, pause/play, next song, loop. This is done to be consistent with large music streaming services, i.e. Spotify and the YouTube Music app and makes it more usable for those already familiar with those platforms -->
         <div class="custom-controls">
           <!-- added shuffle button -->
-          <button id="shuffle-btn" onclick="shuffle()">
+          <!-- <button id="shuffle-btn" onclick="shuffle()">
             <img
               id="shuffle-img"
               src="assets/icons/icons8-shuffle-90.png"
@@ -58,7 +59,8 @@
               width="24"
               height="24"
             />
-          </button>
+          </button> -->
+
           <!-- added previous song button -->
           <button id="prev-song-btn" onclick="back()">
             <img
@@ -90,6 +92,7 @@
             />
           </button>
           <!-- added loop button -->
+          <!--
           <button id="loop-btn" onclick="loop()">
             <img
               id="loop-img"
@@ -99,9 +102,20 @@
               height="24"
             />
           </button>
+        -->
           <!-- added mute/unmute button -->
-          <button id="mute-unmute-btn" onclick="togglemute()"></button>
+          <!-- should be unmuted by default. clicking will change the icon to mute.-->
+          <button id="mute-unmute-btn" onclick="togglemute()">
+            <img
+              id="loop-img"
+              src="Assets/Icons/icons8-audio-90.png"
+              alt="loop button"
+              width="24"
+              height="24"
+            />
+          </button>
           <!-- for the volume change functionality, I wanted to use a slider -->
+          <div class="volume"></div>
           <div class="progress-bar">
             <span id="progress-bar-fill"></span>
           </div>

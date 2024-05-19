@@ -97,6 +97,8 @@ nav a {
   align-items: center;
 }
 
+
+/* progress bar should be above controls*/
 .progress-bar {
   width: 100%;
   height: 10px;

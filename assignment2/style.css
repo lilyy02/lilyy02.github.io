@@ -1,11 +1,11 @@
 /* primary bg is set to dark charcoal (Hex code #333333) for a better viewing experience in low light environments, less bright colours on screen as the purpose of the player is for music for relaxation/study */
 /* Main text colour has been set to "gainsboro" (Hex code #DCDCDC) to be less harsh against the dark backgrounds to be easier on the eyes than pure white */
 :root {
-  --primary-bg-color: #181818;
+  --primary-bg-color: #000000;
   --text-color: #dcdcdc;
-  --main-bg-color: #333;
+  --main-bg-color: #181818;
   --main-text-color: #dcdcdc;
-  --main-btn-bg-color: #938989;
+  --main-btn-bg-color: #181818;
 }
 
 body,
@@ -37,11 +37,11 @@ body {
 }
 
 /* Header styling */
-/* Made heading text bolder
+/* Made heading text bolder */
 header {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
-  padding: 10px 0;
+  padding: 10px 5px;
   text-align: center;
   width: 100%;
 }

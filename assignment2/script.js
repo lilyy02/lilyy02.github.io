@@ -98,7 +98,7 @@ updateTimer = setInterval(seekUpdate,1000)
 currentTrack.addEventListener("ended", nextTrack);
 }
 
-
+ 
 
 
   // make toggleplaypause check for the condition that isPlaying = false
@@ -106,7 +106,7 @@ currentTrack.addEventListener("ended", nextTrack);
 
 
 function togglePlayPause() {
-  if (video.paused || !isPlaying) {
+  if (video.paused || video.ended) {
     video.play();
     playPauseImg.src = "assets/icons/icons8-pause-90.png";
     playTrack();
@@ -146,7 +146,7 @@ function back () {
 
 
 
-// Progress bar changed to show current time of song rather than video. May add seek function if I am able to
+// Progress bar to be changed to show current time of song rather than video. May add seek function if I am able to.
 function updateProgressBar() {
   const value = (audio.currentTime / audio.duration) * 100;
   progressBar.style.width = value + "%";
@@ -158,3 +158,4 @@ function updateProgressBar() {
 function togglemute() {}
 
 // Add other functionalities here
+loadTrack(trackIndex);

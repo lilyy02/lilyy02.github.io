@@ -68,8 +68,17 @@ nav a {
   color: var(--text-color);
 }
 
-.playlist {
+.track-info {
+flex-direction: column;
+display: flex;
+align-items: center;
+}
 
+.track-title {
+  font-size: 1rem;
+}
+.track-artist{
+  font-size: 1rem;
 }
 
 /* Media player styling */
@@ -101,6 +110,7 @@ nav a {
 
 .custom-controls {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -108,10 +118,13 @@ nav a {
   width: 100%;
 }
 /* controls under the div class "right-controls" */
+/* intended to be aligned to the right, away from the rest of the buttons. */
+/* mute/volume button doesnt align vertically witht the other buttons unless set to align-self: right */
+/* also seems to work if i put "flex flex-end", not just flex-end */
+/*not aligning to the right still? still grouped with the others */
+/* maybe get rid of the justify content? */
 .custom-controls .right-controls {
-  display: flex;
-  align-self: right;
-  justify-self: right;
+  align-self: flex flex-end;
 }
 
 .custom-controls button {
@@ -125,29 +138,7 @@ nav a {
   align-items: center;
 }
 
-.mute-unmute-button{
-  display: flex;
-  justify-content: right;
-}
-.custom-controls-right {
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
-}
 
-.custom-controls-right button {
-  background-color: var(--main-btn-bg-color);
-  color: var(--main-text-color);
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
 
 
 

@@ -67,6 +67,10 @@ nav a {
   color: var(--text-color);
 }
 
+.playlist {
+
+}
+
 /* Media player styling */
 .media-player {
   width: 100%;
@@ -76,27 +80,6 @@ nav a {
 .media-player video {
   max-width: 100%;
 }
-
-.custom-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.custom-controls button {
-  background-color: var(--main-btn-bg-color);
-  color: var(--main-text-color);
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-
 
 /* progress bar should be above controls*/
 .progress-bar {
@@ -114,6 +97,47 @@ nav a {
   width: 0;
   transition: width 0.3s ease;
 }
+
+.custom-controls-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.custom-controls-center button {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.custom-controls-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.custom-controls-right button {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+
 
 /* Footer styling */
 footer {

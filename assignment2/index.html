@@ -18,8 +18,8 @@
     <!-- Navigation Section -->
     <nav>
       <ul>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Playlists</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
         <!-- Add or remove navigation items as needed -->
       </ul>
     </nav>
@@ -30,10 +30,7 @@
       <!-- Button icons are sourced from png files in the assignment's folder. Links to the url do not have the correct colour when I modify it, having assets stored locally allows me to make sure that there arent any dead links -->
         <!-- added div for playlist section. this should be a subsection which contains details of songs in the playlist and what is currently playing -->
         <!-- details to show: track name, artist. these should be categories which the audio files fall under and have their own div therefore -->
-        <div class="playlist">
-          <div class="track-title">Title</div>
-          <div class="track-artist">Artist</div>
-        </div>
+
 
       <div class="media-player">
         <!-- this is a short looping video I sourced from a royalty free library to add some more interesting visuals to the page. Should continuously loop as long as music is playing but may add function to disable it from playing to reduce data usage. -->
@@ -45,7 +42,11 @@
         </video>
 
         <!-- buttons are laid out in order from left to right: shuffle, previous song, pause/play, next song, loop. This is done to be consistent with large music streaming services, i.e. Spotify and the YouTube Music app and makes it more usable for those already familiar with those platforms -->
-        <div class="custom-controls-center">
+        <div class="progress-bar">
+          <span id="progress-bar-fill"></span>
+        </div>
+        <div class="custom-controls">
+          
           <!-- <button id="shuffle-btn" onclick="shuffle()">
             <img
               id="shuffle-img"
@@ -102,24 +103,28 @@
           <!-- should be unmuted by default. clicking will change the icon to mute.-->
 
           <!-- for the volume change functionality, I wanted to use a slider -->
-
-
-
-        </div>
-        <div class="custom-controls-right">
+          <!-- buttons should be at the same y level as the rest, but aligned to the right. they are placed in a div within the custom controls div to do this-->
+          <div class = "right-controls">
           <button id="mute-unmute-btn" onclick="togglemute()">
             <img
-              id="loop-img"
+              id="mute-img"
               src="Assets/Icons/icons8-audio-90.png"
-              alt="loop button"
+              alt="mute button"
               width="24"
               height="24"
             />
           </button>
+          </div>
+
+
         </div>
-        <div class="progress-bar">
-          <span id="progress-bar-fill"></span>
+        <div class="playlist">
+          <div class="track-title">Title</div>
+          <div class="track-artist">Artist</div>
         </div>
+
+
+
       </div>
 
       <!-- Additional Content Section -->

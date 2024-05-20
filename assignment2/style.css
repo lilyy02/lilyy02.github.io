@@ -44,6 +44,7 @@ header {
   padding: 10px 5px;
   text-align: center;
   width: 100%;
+  font-weight:550;
 }
 
 /* Navigation styling */
@@ -85,7 +86,7 @@ nav a {
 .progress-bar {
   width: 100%;
   height: 10px;
-  background-color: #ddd;
+  background-color: #181818;
   margin-top: 10px;
   overflow: hidden;
 }
@@ -93,12 +94,12 @@ nav a {
 .progress-bar span {
   display: block;
   height: 100%;
-  background-color: var(--main-bg-color);
+  background-color: var(--text-color);
   width: 0;
   transition: width 0.3s ease;
 }
 
-.custom-controls-center {
+.custom-controls {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,8 +107,14 @@ nav a {
   margin-top: 10px;
   width: 100%;
 }
+/* controls under the div class "right-controls" */
+.custom-controls .right-controls {
+  display: flex;
+  align-self: right;
+  justify-self: right;
+}
 
-.custom-controls-center button {
+.custom-controls button {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
   border: none;
@@ -117,10 +124,15 @@ nav a {
   display: flex;
   align-items: center;
 }
+
+.mute-unmute-button{
+  display: flex;
+  justify-content: right;
+}
 .custom-controls-right {
   display: flex;
   justify-content: right;
-  align-items: center;
+  align-items: right;
   gap: 1rem;
   margin-top: 10px;
   width: 100%;

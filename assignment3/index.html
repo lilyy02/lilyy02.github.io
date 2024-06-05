@@ -9,17 +9,20 @@
       <script src="script.js"></script>
     </head>
     <body>
-      <!--current amount of money is shown in a header with id "currentMoney". this will dynamically update based on the "money" variable in the javascript document.-->
-      <h1 id="currentMoney">$0</h1>
+      <!--current amount of money is shown in a paragraph with id "currentMoney". this should dynamically update based on the "money" variable in the javascript document.-->
+      <p id="currentMoney">$0</p>
       <!-- <div class="clickableArea"> -->
-      <button id="clickButton" onclick="click()">
+        <!-- FUNCTION CAN'T BE CALLED "CLICK" OR IT WON'T WORK! -->
+      <button id="clickButton" onclick="clicked()">
         <img src="tullimonstrum.png" width="600" width="600" />
       </button>
       <!-- </div> -->
 
       <div class="upgrades">
         <button id="extraClicker" onclick="upgradeA()">Extra Clicker</button>
+        <!--upgrade to automatically add $20 every 5 seconds-->
         <button id="incomeStream1" onclick="upgradeB()">Upgrade 1</button>
+        <!--upgrade which automatically adds $100 every 15 seconds-->
         <button id="incomeStream2" onclick="upgradeC()">Upgrade 2</button>
       </div>
     </body>

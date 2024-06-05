@@ -1,5 +1,26 @@
- .clickButton {
+:root {
+  --primary-bg-color: #202020;
+  --text-color: #dcdcdc;
+  --main-bg-color: #202020;
+  --main-text-color: #dcdcdc;
+  --main-btn-bg-color: #202020;
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clickButton {
 width:80%;
+background-color: var(--main-btn-bg-color);
+color: var(--main-btn-bg-color);
  }
  .upgrades {
     display: flex;

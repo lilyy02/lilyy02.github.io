@@ -12,10 +12,10 @@ var cCost = 250;
 function click() {
   var money = money + aLevel;
   // display the value of the "money" variable as a header using innerhtml
-  document.getElementById("currentMoney").innerHTML = money;
+  document.getElementById("currentMoney").innerHTML = "$" + money;
   //logs in console the current value of the money variable to see if function is working
   console.log(money);
-}
+};
 
 // upgrade functions all needs to reduce money by their current cost first, then update the cost for following upgrade levels
 // upgradeA: how much money clicking gives you

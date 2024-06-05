@@ -6,14 +6,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Clicker Game</title>
       <link rel="stylesheet" href="stylesheet.css" />
-      <script src="script.js" defer></script>
+      <script src="script.js"></script>
     </head>
     <body>
-      <!--current amount of money is shown in a paragraph with id "currentMoney". this will dynamically update based on the "money" variable in the javascript document.-->
-      <h1 id="currentMoney">0</h1>
-      <div class="clickableArea">
-        <button id="clickButton" onclick="click()">button</button>
-      </div>
+      <!--current amount of money is shown in a header with id "currentMoney". this will dynamically update based on the "money" variable in the javascript document.-->
+      <h1 id="currentMoney">$0</h1>
+      <!-- <div class="clickableArea"> -->
+      <button id="clickButton" onclick="click()">
+        <img src="tullimonstrum.png" width="600" width="600" />
+      </button>
+      <!-- </div> -->
 
       <div class="upgrades">
         <button id="extraClicker" onclick="upgradeA()">Extra Clicker</button>

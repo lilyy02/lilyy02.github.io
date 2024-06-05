@@ -1,0 +1,21 @@
+ .clickButton {
+width:80%;
+ }
+ .upgrades {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10px;
+    width: 20%;
+  }
+
+  .extraClicker {
+    background-color: var(--main-btn-bg-color);
+    color: var(--main-text-color);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }

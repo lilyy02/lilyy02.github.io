@@ -22,30 +22,56 @@ setInterval(function () {
   money = money + bLevel * 20;
 }, 5000);
 
-// function which adds 100 money for each cLevel every 15 seconds. temporarily disabled to prevent conflicts with previous function while I ensure everything works.
-// setInterval(function() {
-//   money = money + cLevel * 100;
-// }, 15000);
+// function which adds 100 money for each cLevel every 15 seconds.
+setInterval(function() {
+   money = money + cLevel * 100;
+ }, 15000);
+
+
 
 // upgrade functions all needs to reduce money by their current cost first, then update the cost for following upgrade levels
 // upgradeA: how much money clicking gives you
 // do not put "" around variables or they will become string values, not integers!
 function upgradeA() {
-  if (money >= aCost) aLevel = aLevel + 1;
+  if (money >= aCost) 
   money = money - aCost;
+  aLevel = aLevel + 1;
+  // need to update current money indicator every time value changes
+  document.getElementById("currentMoney").innerHTML = "$" + money;
 // cost increase might have to be in a seperate function. Having it in the same one as the upgrade makes the money count go negative.
-  aCost = aCost * 1.5;
-  aCostIncrease()
+  CostIncreaseA()
+  console.log(money);
 }
+function CostIncreaseA() {
+  aCost = aCost * 1.5;
+  // make number round to whole number to keep number of decimal points down
+}
+
+
+
 //upgradeB: regular delivery of x amount of money every 5 seconds
 function upgradeB() {
-  if (money >= bCost) bLevel = bLevel + 1;
+  if (money >= bCost) 
   money = money - bCost;
+  bLevel = bLevel + 1;
+  document.getElementById("currentMoney").innerHTML = "$" + money;
+  CostIncreaseB()
+  console.log(money);
+}
+function CostIncreaseB(){
   bCost = bCost * 1.5;
 }
+
+
 //upgradeC: regular delivery of y amount of money every 15 seconds
 function upgradeC() {
-  if (money >= cCost) cLevel = cLevel + 1;
-  money = money - cCost;
+  if (money >= cCost) 
+    money = money - cCost;
+    cLevel = cLevel + 1;
+    document.getElementById("currentMoney").innerHTML = "$" + money;
+    CostIncreaseC()
+    console.log(money);
+}
+function CostIncreaseC(){
   cCost = cCost * 1.5;
 }

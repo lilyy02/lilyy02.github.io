@@ -17,9 +17,23 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* seem to need to use a div to make the money indicator change */
+.score {
+  align-self: center;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+  background-color: green;
+}
+
 .clickableArea {
   float: right;
   width: 70%;
+}
+#clickableArea clickButton {
+  color: #202020;
+  background-color: #202020;
 }
 
 .upgrades {
@@ -30,16 +44,9 @@ body {
   width: 30%;
   float: left;
 }
-/* seem to need to use a div to make the money indicator change */
-.score {
-  align-self: center;
-  text-align: center;
-  font-size: 40px;
-  font-weight: bolder;
-  background-color: green;
-}
 
-.extraClicker {
+
+#upgrades extraClicker {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
   border: none;

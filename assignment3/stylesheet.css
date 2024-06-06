@@ -10,35 +10,42 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
+  margin: 2%;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
+.clickableArea {
+  float: right;
+  width: 70%;
+}
 
-.clickButton {
-width:80%;
-background-color: var(--main-btn-bg-color);
-color: var(--main-btn-bg-color);
-float: right;
- }
- .upgrades {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 10px;
-    width: 20%;
-    float: left;
-  }
+.upgrades {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  margin-top: 0px;
+  width: 30%;
+  float: left;
+}
+/* seem to need to use a div to make the money indicator change */
+.score {
+  align-self: center;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+  background-color: green;
+}
 
-  .extraClicker {
-    background-color: var(--main-btn-bg-color);
-    color: var(--main-text-color);
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
+.extraClicker {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}

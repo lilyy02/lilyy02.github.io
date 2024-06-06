@@ -20,11 +20,13 @@ function clicked() {
 // math should follow standard order of operations
 setInterval(function () {
   money = money + bLevel * 20;
+  document.getElementById("currentMoney").innerHTML = "$" + money;
 }, 5000);
 
 // function which adds 100 money for each cLevel every 15 seconds.
 setInterval(function() {
    money = money + cLevel * 100;
+   document.getElementById("currentMoney").innerHTML = "$" + money;
  }, 15000);
 
 

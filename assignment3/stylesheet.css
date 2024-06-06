@@ -10,17 +10,18 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+}
+
+*{
+  margin: 0;
+  padding: 0;
 }
 
 .clickButton {
 width:80%;
 background-color: var(--main-btn-bg-color);
 color: var(--main-btn-bg-color);
+float: right;
  }
  .upgrades {
     display: flex;
@@ -28,6 +29,7 @@ color: var(--main-btn-bg-color);
     gap: 1rem;
     margin-top: 10px;
     width: 20%;
+    float: left;
   }
 
   .extraClicker {

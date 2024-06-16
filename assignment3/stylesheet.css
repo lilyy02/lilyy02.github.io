@@ -1,5 +1,5 @@
 :root {
-  --primary-bg-color: #202020;
+  --primary-bg-color: #fffff;
   --text-color: #dcdcdc;
   --main-bg-color: #202020;
   --main-text-color: #dcdcdc;
@@ -10,39 +10,89 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--text-color);
-  margin: 2%;
+  margin: 0%;
 }
 
 * {
   margin: 0;
   padding: 0;
 }
+/* using seperate divs for the lines to make the background look like notebook paper.*/
+/* z-index property used to determine how sections should overlap*/
+.leftmargin {
+  position: absolute;
+  border-right: 1px solid red;
+  z-index: 2;
+  width:25%;
+  height:100%
+}
+
+.headermargin {
+  position: sticky;
+  height: 15%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+/* there is probably a more efficient way to make multiple lines spaced throughout the page... */
+/* use relative positioning to make properties such as top, left, etc move element away from its normal position */
+.vmargin1 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vmargin2 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vmargin3 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vmargin4 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
 
 /* seem to need to use a div to make the money indicator change */
 .score {
+  position: sticky;
   align-self: center;
   text-align: center;
   font-size: 40px;
   font-weight: bolder;
   background-color: green;
+  z-index: 3;
+
 }
 
 .clickableArea {
   float: right;
   width: 70%;
+  z-index: 3;
 }
 #clickableArea clickButton {
   color: #202020;
   background-color: #202020;
+  z-index: 3;
 }
 
 .upgrades {
+  /* can only press the buttons if the cursor is to the right of the red vertical line currently... */
+  /* z index is higher than the div that the margin is made with... */
   display: flex;
   flex-direction: column;
   gap: 0rem;
   margin-top: 0px;
   width: 30%;
   float: left;
+  z-index: 3;
 }
 
 
@@ -55,4 +105,5 @@ body {
   font-size: 16px;
   display: flex;
   align-items: center;
+  z-index: 3;
 }

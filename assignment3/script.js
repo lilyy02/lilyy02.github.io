@@ -19,15 +19,15 @@ function clicked() {
 //function which adds 20 money for each bLevel every 5 seconds. Values taken in ms. 1000ms = 1s
 // math should follow standard order of operations
 setInterval(function () {
-  money = money + bLevel * 20;
+  money = money + bLevel * 5;
   document.getElementById("currentMoney").innerHTML = "$" + money;
-}, 5000);
+}, 1000);
 
 // function which adds 100 money for each cLevel every 15 seconds.
 setInterval(function() {
-   money = money + cLevel * 100;
+   money = money + cLevel * 50;
    document.getElementById("currentMoney").innerHTML = "$" + money;
- }, 15000);
+ }, 5000);
 
 
 
@@ -41,6 +41,8 @@ function upgradeA() {
   // need to update current money indicator every time value changes
   document.getElementById("currentMoney").innerHTML = "$" + money;
 // cost increase might have to be in a seperate function. Having it in the same one as the upgrade makes the money count go negative.
+// cost increase functions multiply the current cost by a percentage, so that the next time you level up an upgrade it costs more. 
+// cost increase has been chosen to increase multiplicatively so that the amount of points earned doesnt outpace the amount you can spend too quickly. This is aimed to help keep the game engaging for longer.
   CostIncreaseA()
   console.log(money);
 }

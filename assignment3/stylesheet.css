@@ -31,6 +31,7 @@ body {
   font-size: 40px;
   font-weight: bolder;
   color: black;
+  line-height: 90%;
   /* need to make text just above the bottom border */
 }
 /* there is probably a more efficient way to make multiple lines spaced throughout the page... */
@@ -157,10 +158,8 @@ body {
   /* added a max height value so that the image fits in landscape viewports */
   max-height: 85%;
 }
-#clickableArea clickButton {
-  color: #202020;
-  background-color: #202020;
-  z-index: 3;
+.clickableArea:hover{
+ filter: saturate(160%);
 }
 
 .upgrades {

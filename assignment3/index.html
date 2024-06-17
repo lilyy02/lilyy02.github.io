@@ -12,13 +12,27 @@
       <div class = "bgMargins"></div>
       <!--current amount of money is shown in a paragraph with id "currentMoney". this should dynamically update based on the "money" variable in the javascript document.-->
       <div class="leftmargin"></div>
-      <div class="headermargin"></div>
-      <div class="vmargin1"></div>
-      <div class="vmargin2"></div>
-      <div class="vmargin3"></div>
-      <div class="vmargin4"></div>
-      <div class="score">
-      <p id="currentMoney">$0</p>
+      <div class="headermargin">
+        <p id="currentMoney">$0</p>
+      </div>
+      <div class="vMargin1"></div>
+      <div class="vMargin2"></div>
+      <div class="vMargin3"></div>
+      <div class="vMargin4"></div>
+      <div class="vMargin5"></div>
+      <div class="vMargin6"></div>
+      <div class="vMargin7"></div>
+      <div class="vMargin8"></div>
+      <div class="vMargin9"></div>
+      <div class="vMargin10"></div>
+      <div class="vMargin11"></div>
+      <div class="vMargin12"></div>
+      <div class="vMargin13"></div>
+      <div class="vMargin14"></div>
+      <div class="vMargin15"></div>
+      <div class="vMargin16"></div>
+      <!-- <div class="score"> -->
+      <!-- <p id="currentMoney">$0</p> -->
       </div>
       <!-- make the button for clicking and the upgrades the -->
       <div class="clickableArea">
@@ -29,15 +43,34 @@
       </div>
 
       <div class="upgrades">
-        <button id="extraClicker" onclick="upgradeA()">Extra Clicker <br> $25 <br> Makes your clicks give an extra $1 per level</button>
-        <!--upgrade to automatically add $20 every 5 seconds-->
-        <button id="incomeStream1" onclick="upgradeB()">Upgrade B <br> $100 <br> Automatically adds $5 per level every 1s</button>
-        <!--upgrade which automatically adds $100 every 15 seconds-->
-        <button id="incomeStream2" onclick="upgradeC()">Upgrade C <br> $250 <br> Automatically adds $50 per level every 5s</button>
-      <p id ="currentUpgradeALevel"></p>
-      <p id ="currentUpgradeBLevel"></p>
-      <p id ="currentUpgradeCLevel"></p>
+        <!-- switching buttons to custom ones made using a div -->
+        <div class="customButton" onclick="upgradeA()">
+          Extra Clicker
+          <!-- paragraphs within div with an id can be changed using document.getElementByID  in javascript to dynamically update to show current levels of each upgrade, cost. -->
+          <p id="upgradeACost">$25</p>
+          <p id="currentUpgradeALevel">Level 1</p>
+      
+Makes your clicks give an extra $1 per level
+        </div>
+        <div class="customButton2" onclick="upgradeB()">
+          -PH- Upgrade B
+          <p id="upgradeBCost">$100</p>
+<p id="currentUpgradeBLevel">Not Owned</p>
+Automatically adds $5 per level every 1s
+        </div>
+        <div class="customButton3" onclick="upgradeC()">
+        -PH- Upgrade C
+        <p id ="upgradeCCost">$250</p>
+        <p id="currentUpgradeCLevel">Not Owned</p>
+        automatically adds $50 per level every 5s
+        </div>
+        <!-- <button id="extraClicker" onclick="upgradeA()">Extra Clicker <br> $25 <br> Makes your clicks give an extra $1 per level</button> -->
+        <!-- upgrade to automatically add $5 every 1 seconds-->
+        <!-- <button id="incomeStream1" onclick="upgradeB()">Upgrade B <br> $100 <br> Automatically adds $5 per level every 1s</button> -->
+        <!-- upgrade which automatically adds $50 every 5 seconds-->
+        <!-- <button id="incomeStream2" onclick="upgradeC()">Upgrade C <br> $250 <br> Automatically adds $50 per level every 5s</button> -->
       </div>
+      
     </body>
   </html></index
 >

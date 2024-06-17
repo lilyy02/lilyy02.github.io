@@ -1,8 +1,8 @@
 :root {
   --primary-bg-color: #fffff;
-  --text-color: #dcdcdc;
+  --text-color: black;
   --main-bg-color: #202020;
-  --main-text-color: #dcdcdc;
+  --main-text-color: black;
   --main-btn-bg-color: #202020;
 }
 
@@ -19,41 +19,114 @@ body {
 }
 /* using seperate divs for the lines to make the background look like notebook paper.*/
 /* z-index property used to determine how sections should overlap*/
-.leftmargin {
-  position: absolute;
-  border-right: 1px solid red;
-  z-index: 2;
-  width:25%;
-  height:100%
-}
 
 .headermargin {
+  /* was using sticky positioning so that the score would always be visible when the page is scrolled though, however ideally everything should fit into the window without needing this.*/
   position: sticky;
   height: 15%;
   border-bottom: 1px solid blue;
   z-index: 1;
+  align-self: center;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+  color: black;
+  /* need to make text just above the bottom border */
 }
 /* there is probably a more efficient way to make multiple lines spaced throughout the page... */
 /* use relative positioning to make properties such as top, left, etc move element away from its normal position */
-.vmargin1 {
+/* fill remaining 85% with lines */
+.vMargin1 {
   position: relative;
   height: 5%;
   border-bottom: 1px solid blue;
   z-index: 1;
 }
-.vmargin2 {
+.vMargin2 {
   position: relative;
   height: 5%;
   border-bottom: 1px solid blue;
   z-index: 1;
 }
-.vmargin3 {
+.vMargin3 {
   position: relative;
   height: 5%;
   border-bottom: 1px solid blue;
   z-index: 1;
 }
-.vmargin4 {
+.vMargin4 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin5 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin6 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin7 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin8 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin9 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin10 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin11 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin12 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin13 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin14 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin15 {
+  position: relative;
+  height: 5%;
+  border-bottom: 1px solid blue;
+  z-index: 1;
+}
+.vMargin16 {
   position: relative;
   height: 5%;
   border-bottom: 1px solid blue;
@@ -61,7 +134,8 @@ body {
 }
 
 /* seem to need to use a div to make the money indicator change */
-.score {
+/* changed place score is shown to the header margin
+/* .score {
   position: sticky;
   align-self: center;
   text-align: center;
@@ -70,12 +144,16 @@ body {
   background-color: green;
   z-index: 3;
 
-}
+} */
+
 
 .clickableArea {
   float: right;
-  width: 70%;
+  width: 75%;
   z-index: 3;
+  position: absolute;
+  top: 15%;
+  left: 25%;
 }
 #clickableArea clickButton {
   color: #202020;
@@ -90,12 +168,16 @@ body {
   flex-direction: column;
   gap: 0rem;
   margin-top: 0px;
-  width: 30%;
   float: left;
-  z-index: 3;
+  position: absolute;
+  top: 0%;
+  border-right: 1px solid red;
+  z-index: 2;
+  width:25%;
+  height:100%
 }
 
-
+/* trying to style something with a specific id within a class. Doesnt seem to work using #upgrades extraClicker */
 #upgrades extraClicker {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
@@ -106,4 +188,62 @@ body {
   display: flex;
   align-items: center;
   z-index: 3;
+}
+
+.customButton{
+  /* to be positioned below the header margin */
+  background-color: transparent;
+  border: black;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 4;
+  position: absolute;
+  top: 15%;
+  /* line-height: %; */
+  /* adjust line height so that words lie on top of the blue lines as they would if hand written */
+}
+/* made buttons underline when hovered over so its easier to tell what you're clicking on.*/
+.customButton:hover{
+  text-decoration: underline;
+}
+.customButton2{
+  /* to be positioned below the header margin */
+  background-color: transparent;
+  border: black;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 4;
+  position: absolute;
+  top: 35%
+}
+.customButton2:hover{
+  text-decoration: underline;
+}
+.customButton3{
+  /* to be positioned below the header margin */
+  background-color: transparent;
+  border: black;
+  color: black;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 4;
+  position: absolute;
+  top: 55%
+}
+.customButton3:hover{
+  text-decoration: underline;
 }

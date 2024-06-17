@@ -150,16 +150,19 @@ body {
 
 .clickableArea {
   float: right;
-  width: 75%;
   z-index: 3;
   position: absolute;
   top: 15%;
   left: 25%;
   /* added a max height value so that the image fits in landscape viewports */
   max-height: 85%;
+  height: auto;
+  max-width: 75%;
+  width: auto;
+  filter: opacity(75%);
 }
 .clickableArea:hover{
- filter: saturate(160%);
+ filter: opacity(100%);
 }
 
 .upgrades {

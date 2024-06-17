@@ -154,6 +154,8 @@ body {
   position: absolute;
   top: 15%;
   left: 25%;
+  /* added a max height value so that the image fits in landscape viewports */
+  max-height: 85%;
 }
 #clickableArea clickButton {
   color: #202020;
@@ -192,6 +194,7 @@ body {
 
 .customButton{
   /* to be positioned below the header margin */
+  /* on a bigger view window the text doesnt center properly*/
   background-color: transparent;
   border: black;
   color: black;

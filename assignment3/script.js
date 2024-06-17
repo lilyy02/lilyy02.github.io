@@ -37,7 +37,8 @@ setInterval(function() {
 function upgradeA() {
   // added another if condition for the money to not equal zero to prevent the issue of being able to buy upgrades with no money.
   // still does not prevent the upgrade from occuring.
-  if (money >= aCost && money != 0) 
+  // oopsie forgot the curly brackets for the if statement
+  if (money >= aCost && money != 0) {
 // currently an issue with if condition: if money is at 0 all upgrades can be bought without it deducting anything. Was working fine before, not sure whats happened here as I havent changed the code which should do this.
 // if condition seems to just be not working at all... was working in older versions, not much of the javascript has been changed.
   money = money - aCost;
@@ -50,6 +51,7 @@ function upgradeA() {
   document.getElementById("currentUpgradeALevel").innerHTML = "Level " + aLevel
 CostIncreaseA()
   console.log(money);
+  }
 }
 function CostIncreaseA() {
   aCost = aCost * 1.5;
@@ -66,13 +68,14 @@ function CostIncreaseA() {
 
 //upgradeB: regular delivery of x amount of money every 5 seconds
 function upgradeB() {
-  if (money >= bCost ) 
+  if (money >= bCost ) {
   money = money - bCost;
   bLevel = bLevel + 1;
   document.getElementById("currentMoney").innerHTML = "$" + money;
   document.getElementById("currentUpgradeBLevel").innerHTML = "level " + bLevel
   CostIncreaseB()
   console.log(money);
+  }
 }
 function CostIncreaseB(){
   bCost = bCost * 1.5;
@@ -82,13 +85,14 @@ function CostIncreaseB(){
 
 //upgradeC: regular delivery of y amount of money every 15 seconds
 function upgradeC() {
-  if (money >= cCost) 
+  if (money >= cCost) {
     money = money - cCost;
     cLevel = cLevel + 1;
     document.getElementById("currentMoney").innerHTML = "$" + money;
     document.getElementById("currentUpgradeCLevel").innerHTML = "level " + cLevel
     CostIncreaseC()
     console.log(money);
+}
 }
 function CostIncreaseC(){
   cCost = cCost * 1.5;
